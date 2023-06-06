@@ -1,0 +1,46 @@
+li{
+    list-style: none;
+}
+.list{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.btn{
+    width: 80px;
+    height: 20px;
+    background-color: mediumpurple;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-btn{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-product{
+    width: 25%;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.input{
+    margin: 7px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

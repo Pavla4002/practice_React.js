@@ -1,0 +1,20 @@
+.product-info{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #d5d5ff;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+}
+.product-image{
+    width: 25px;
+    height: 25px;
+}
+.jcsb{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
