@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../Purchases.css'
 import Mark from "./Mark";
 import MyButton from "./MyButton";
@@ -6,30 +6,41 @@ import {IPurchases} from "../types/purchases";
 
 
 interface purchasesProps{
-    element:IPurchases;
-    onDecrement:React.MouseEventHandler<HTMLButtonElement> | undefined;
-    onIncrement:React.MouseEventHandler<HTMLButtonElement> | undefined;
-    count:number;
-    // removeProduct:React.MouseEventHandler<HTMLButtonElement>
+    purchase:IPurchases;
+    updateElement: (product: IPurchases) => void;
+    deleteElement: (product: IPurchases) => void;
 }
 
-const Purchases = ({element,onDecrement, onIncrement,count}: purchasesProps) =>{
-    const handleClick: React.MouseEventHandler<HTMLButtonElement> = (e) =>{
-        console.log(element);
-        console.log(e.target);
+const Purchases = ({purchase, updateElement, deleteElement}: purchasesProps) =>{
+    const handleDelete: React.MouseEventHandler<HTMLButtonElement> = () =>{
+      deleteElement(purchase);
+    }
+    const handleIncrement:  React.MouseEventHandler<HTMLButtonElement> = () => {
+
+      updateElement({
+        ...purchase,
+        count: purchase.count + 1
+      })
+    }
+    const handleDecrement:  React.MouseEventHandler<HTMLButtonElement> = () => {
+      // TODO::Добавить проверки, или условия чтобы удалялось если меньше 1.
+      updateElement({
+        ...purchase,
+        count: purchase.count - 1
+      })
     }
     return(
-             <li key={ element.id}>
-                <p>Название: {element.name}</p>
-                <p>Стоимость: {element.cost}</p>
-                <p>Количество: {count}</p>
-                 <p>Общая стоимость: {element.count*element.cost}</p>
+             <li>
+                <p>Название: {purchase.name}</p>
+                <p>Стоимость: {purchase.cost}</p>
+                <p>Количество: {purchase.count}</p>
+                 <p>Общая стоимость: {purchase.count * purchase.cost}</p>
                  <div className="box-btn">
-                     <MyButton onClick={onIncrement}>+</MyButton>
-                     <MyButton onClick= {onDecrement}>-</MyButton>
-                     <MyButton onClick={handleClick}>Удалить</MyButton>
+                     <MyButton onClick={handleIncrement}>+</MyButton>
+                     <MyButton onClick= {handleDecrement}>-</MyButton>
+                     <MyButton onClick={handleDelete}>Удалить</MyButton>
                  </div>
-                <p>{element.inCart && <Mark/>}</p>
+                <p>{purchase.inCart && <Mark/>}</p>
              </li>
     );
 }
