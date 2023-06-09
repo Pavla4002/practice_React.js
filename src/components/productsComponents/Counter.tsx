@@ -1,4 +1,4 @@
-import MyButton from "./MyButton";
+import MyButton from "../MyButton";
 import {useState} from "react";
 
 

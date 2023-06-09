@@ -1,9 +1,11 @@
 import React from 'react';
-import '../styles/Purchases.css'
+import '../../styles/Purchases.css'
 import Mark from "./Mark";
-import MyButton from "./MyButton";
-import {IPurchases} from "../types";
-import {useProductDispatch} from "../hooks/useProductDispatch";
+import MyButton from "../MyButton";
+import {IPurchases} from "../../types";
+import {useProductDispatch} from "../../hooks/useProductDispatch";
+import {useTheme} from "../../hooks/useTheme";
+import classNames from "classnames";
 
 
 interface purchasesProps{
@@ -11,6 +13,8 @@ interface purchasesProps{
 }
 
 const Purchases = ({element}: purchasesProps) =>{
+    const theme = useTheme();
+    const classForCard = classNames('li-class',{"dark-li" : theme==="dark"},{"light-li" : theme==="light"})
     const dispatch = useProductDispatch()
     const handleDelete: React.MouseEventHandler<HTMLButtonElement> = () =>{
         dispatch({
@@ -53,18 +57,24 @@ const Purchases = ({element}: purchasesProps) =>{
         })
     }
     return(
-             <li key={ element.id}>
+             <li key={ element.id} className={classForCard}>
+                 <div className="mark">
+                     <div>{element.inCart && <Mark/>}</div>
+                 </div>
                 <p>Название: {element.name}</p>
-                <p>Стоимость: {element.cost}</p>
                 <p>Количество: {element.count}</p>
+                 <p>Стоимость: {element.cost}</p>
                  <p>Общая стоимость: {element.count*element.cost}</p>
                  <div className="box-btn">
-                     <MyButton onClick={toggleCard}>В корзину</MyButton>
-                     <MyButton onClick={handleIncrement}>+</MyButton>
-                     <MyButton onClick={handleDecrement}>-</MyButton>
-                     <MyButton onClick={handleDelete}>Удалить</MyButton>
+                     <div className="small-box-btn">
+                         <MyButton onClick={handleIncrement}>+</MyButton>
+                         <MyButton onClick={handleDecrement}>-</MyButton>
+                     </div>
+                  <div className="small-box-btn">
+                        <MyButton onClick={handleDelete}>Удалить</MyButton>
+                        <MyButton onClick={toggleCard}>В корзину</MyButton>
+                  </div>
                  </div>
-                <p>{element.inCart && <Mark/>}</p>
              </li>
     );
 }

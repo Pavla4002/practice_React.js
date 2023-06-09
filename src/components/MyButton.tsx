@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import '../styles/Purchases.css'
 import classNames from "classnames";
 import {useTheme} from "../hooks/useTheme";

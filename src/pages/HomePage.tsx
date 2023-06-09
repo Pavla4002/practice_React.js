@@ -1,7 +1,7 @@
 import React from 'react';
-import FormProduct from "../components/FormProduct";
-import PurchasesList from "../components/PurchasesList";
-import ThemesChanger from "../components/ThemesChanger";
+import FormProduct from "../components/productsComponents/FormProduct";
+import PurchasesList from "../components/productsComponents/PurchasesList";
+import ThemesChanger from "../components/productsComponents/ThemesChanger";
 import ProductProvider from "../context/Products/ProductProvider";
 
 const HomePage = () => {

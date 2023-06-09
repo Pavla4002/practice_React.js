@@ -1,9 +1,9 @@
-import MyInput from "./MyInput";
-import MyButton from "./MyButton";
-import '../styles/Purchases.css';
+import MyInput from "../MyInput";
+import MyButton from "../MyButton";
+import '../../styles/Purchases.css';
 import React, {useState} from "react";
-import {IPurchases} from "../types";
-import {useProductDispatch} from "../hooks/useProductDispatch";
+import {IPurchases} from "../../types";
+import {useProductDispatch} from "../../hooks/useProductDispatch";
 
 const initValue: IPurchases = {
     id:0,
@@ -57,7 +57,6 @@ export default function FormProduct(){
                     <span>Стоимость:</span>
                     <MyInput  type="number" handleChange={handleChange} value={product.cost} name="cost"/>
                 </div>
-
                 <MyButton disabled={status!=="typing"} type="submit" >Добавить</MyButton>
             </form>
 

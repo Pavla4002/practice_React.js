@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/Purchases.css'
+import '../../styles/Purchases.css'
 import Purchases from "./Purchases";
-import {useProducts} from "../hooks/useProducts";
+import {useProducts} from "../../hooks/useProducts";
 
 
 export default function PurchasesList(){
@@ -22,7 +22,6 @@ export default function PurchasesList(){
 
                 : <h2>Добавьте товары</h2>
             }
-
         </div>
     );
 }

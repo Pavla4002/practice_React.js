@@ -10,10 +10,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <ThemeProvider>
-
           <App />
       </ThemeProvider>
-
   </React.StrictMode>
 );
 
