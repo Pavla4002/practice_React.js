@@ -1,8 +1,9 @@
 import MyInput from "./MyInput";
 import MyButton from "./MyButton";
-import '../Purchases.css';
+import '../styles/Purchases.css';
 import React, {useState} from "react";
-import {IPurchases} from "../types/purchases";
+import {IPurchases} from "../types";
+import {useProductDispatch} from "../hooks/useProductDispatch";
 
 const initValue: IPurchases = {
     id:0,
@@ -11,42 +12,55 @@ const initValue: IPurchases = {
     cost:0,
     inCart:false
 }
-interface formProps{
-    addProduct:(product:IPurchases) => void
-}
+// interface formProps{
+//     addProduct:(product:IPurchases) => void
+// }
 
-export default function FormProduct({addProduct}:formProps){
+type TStatusForm = "empty" | "typing" | "error" | "submitting" | "success"
+export default function FormProduct(){
+    const dispatch = useProductDispatch()
+
+    const [status, setStatus] = useState<TStatusForm>("empty");
     const [product,setProduct] = useState<IPurchases>(initValue)
-   const handleChange : React.ChangeEventHandler<HTMLInputElement> =(e) =>{
+    const handleChange : React.ChangeEventHandler<HTMLInputElement> =(e) =>{
+        if(e.target.value.length!== 0){
+            setStatus("typing")
+        }
        setProduct({
            ...product,
            [e.target.name]:e.target.value
        });
-   }
+    }
     const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) =>{
         e.preventDefault()
-        addProduct(product)
-        setProduct(initValue)
+            dispatch({
+                type: "add",
+                payload: product
+            })
+            setProduct(initValue)
     }
+
+
     return(
-        <div className="form-product">
-            <form className="form" onSubmit={handleSubmit}>
-                <div>
+        <div className="form">
+            <h2>Добавлени товаров</h2>
+          <form className="form-product" onSubmit={handleSubmit}>
+                <div className='input-box'>
                     <span>Имя:</span>
-                    <MyInput type="text" handleChange={handleChange} value={product.name} name="name"/>
+                    <MyInput  handleChange={handleChange} value={product.name} name="name"/>
                 </div>
-                <div>
+                <div className='input-box'>
                     <span>Количество:</span>
                     <MyInput type="number" handleChange={handleChange} value={product.count} name="count"/>
                 </div>
-                <div>
+                <div className='input-box'>
                     <span>Стоимость:</span>
                     <MyInput  type="number" handleChange={handleChange} value={product.cost} name="cost"/>
                 </div>
 
-
-                <MyButton type="submit" >Добавить</MyButton>
+                <MyButton disabled={status!=="typing"} type="submit" >Добавить</MyButton>
             </form>
+
         </div>
     );
 }

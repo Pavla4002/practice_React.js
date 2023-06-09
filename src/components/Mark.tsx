@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Product.css'
+import '../styles/Product.css'
 
 export default function Mark(){
     return(

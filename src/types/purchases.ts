@@ -5,3 +5,8 @@ export interface IPurchases{
     inCart:boolean,
     name:string,
 }
+
+export interface IActionProduct{
+    type: "add" | "update" |"delete",
+    payload:IPurchases
+}
