@@ -62,14 +62,18 @@ li{
 }
 .form{
     width: 100%;
+    height: 350px;
     margin-top: 30px;
-    margin-bottom: 2%;
 }
 .input{
     margin: 7px;
    width: 100%;
     display: flex;
     justify-content: space-between;
+}
+.width-input-block{
+    width: 200px;
+    margin: 0 auto;
 }
 .input-box{
     margin: 7px;

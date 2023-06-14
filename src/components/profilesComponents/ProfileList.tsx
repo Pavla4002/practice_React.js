@@ -5,7 +5,7 @@ import {useProfile} from "../../hooks/useProfile";
 export default function ProfileList(){
     const profiles  = useProfile()
     let listProfile = profiles.map(profile =>
-        <Profile profile={profile}/>
+        <Profile profile={profile} key={profile.id}/>
         )
     return(
         <>

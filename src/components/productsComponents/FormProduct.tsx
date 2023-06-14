@@ -4,6 +4,9 @@ import '../../styles/Purchases.css';
 import React, {useState} from "react";
 import {IPurchases} from "../../types";
 import {useProductDispatch} from "../../hooks/useProductDispatch";
+import {ListProductContext} from "../../context/Products/productsContext";
+import {UseListProduct} from "../../hooks/useListProduct";
+import {flushSync} from "react-dom";
 
 const initValue: IPurchases = {
     id:0,
@@ -12,14 +15,11 @@ const initValue: IPurchases = {
     cost:0,
     inCart:false
 }
-// interface formProps{
-//     addProduct:(product:IPurchases) => void
-// }
 
 type TStatusForm = "empty" | "typing" | "error" | "submitting" | "success"
 export default function FormProduct(){
     const dispatch = useProductDispatch()
-
+    const listRef = UseListProduct()
     const [status, setStatus] = useState<TStatusForm>("empty");
     const [product,setProduct] = useState<IPurchases>(initValue)
     const handleChange : React.ChangeEventHandler<HTMLInputElement> =(e) =>{
@@ -33,17 +33,23 @@ export default function FormProduct(){
     }
     const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) =>{
         e.preventDefault()
+        flushSync(()=>{
             dispatch({
                 type: "add",
                 payload: product
             })
             setProduct(initValue)
-    }
+        })
 
+        listRef.current?.scrollIntoView({
+            behavior:"smooth",
+            block:"end",
+        })
+    }
 
     return(
         <div className="form">
-            <h2>Добавлени товаров</h2>
+            <h2>Добавление товаров</h2>
           <form className="form-product" onSubmit={handleSubmit}>
                 <div className='input-box'>
                     <span>Имя:</span>

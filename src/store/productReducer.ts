@@ -3,7 +3,7 @@ import {IActionProduct, IPurchases} from "../types";
  export const productReducer = (products:IPurchases[], {type,payload:product}:IActionProduct)=>{
         switch (type){
             case "add":{
-                return[...products,product];
+                return[...products,{...product,id:Date.now()}];
             }
             case "update":{
                 return products.map(p => p.id ===product.id ? product : p);

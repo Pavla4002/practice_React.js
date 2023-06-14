@@ -14,8 +14,8 @@ interface purchasesProps{
 
 const Purchases = ({element}: purchasesProps) =>{
     const theme = useTheme();
-    const classForCard = classNames('li-class',{"dark-li" : theme==="dark"},{"light-li" : theme==="light"})
-    const dispatch = useProductDispatch()
+    const classForCard = classNames('li-class',{"dark-li" : theme==="dark"},{"light-li" : theme==="light"});
+    const dispatch = useProductDispatch();
     const handleDelete: React.MouseEventHandler<HTMLButtonElement> = () =>{
         dispatch({
             type:"delete",
@@ -55,9 +55,10 @@ const Purchases = ({element}: purchasesProps) =>{
                 inCart: !element.inCart
             }
         })
+        console.log(element.id)
     }
     return(
-             <li key={ element.id} className={classForCard}>
+             <li key={element.id} className={classForCard}>
                  <div className="mark">
                      <div>{element.inCart && <Mark/>}</div>
                  </div>
