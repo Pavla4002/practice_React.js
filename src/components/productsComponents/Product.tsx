@@ -1,5 +1,5 @@
 import React from 'react';
-import Mark from './Mark'
+import Mark from './Marck/Mark'
 import '../../styles/Product.css'
 
 let product = {

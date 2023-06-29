@@ -1,0 +1,9 @@
+.publicFooter{
+    width: 100%;
+    height: 70px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

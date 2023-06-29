@@ -1,0 +1,39 @@
+.areaHeader{
+    width: 100%;
+    /*background-color: #006633;*/
+    background-color:green;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+.linkNav{
+    color: white;
+    padding: 7px;
+    text-decoration: none;
+}
+.linkActive{
+    color: #006633;
+    background-color: #fff;
+    
+}
+.headerContent{
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ul{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ul li{
+    list-style: none;
+}
+.btnAndLink{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}

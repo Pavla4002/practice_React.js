@@ -1,0 +1,17 @@
+.timerArea{
+    width:90%;
+    height: 77.5%;
+    background-color: white;
+    border: solid 3px green;
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+}
+.btnTime{
+    width: 20%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 20px;
+}

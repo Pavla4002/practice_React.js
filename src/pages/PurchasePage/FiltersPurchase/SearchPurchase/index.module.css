@@ -1,0 +1,15 @@
+.searchStyleForm{
+    padding:10px 0;
+    position: relative;
+}
+.searchStyle{
+    width: 200px;
+    height: 20px;
+}
+.bigBlockSearch{
+    margin: 20px 0;
+}
+.spinner{
+    position: absolute;
+    right: 20px;
+}

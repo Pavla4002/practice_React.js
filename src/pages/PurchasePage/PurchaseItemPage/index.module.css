@@ -1,0 +1,46 @@
+/*Не рабочие*/
+
+.purchaseArea{
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.purchaseText{
+    padding-bottom: 20px;
+}
+
+.purchaseItem{
+    width: 100%;
+    border: solid 3px #32CD32;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.card{
+    height: 90%;
+    width: 100%;
+    /*background-color: #fff;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.deleteEditBtn{
+    width: 85%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    margin-right: 20px;
+}
+.btnAddDelete{
+    width: 85%;
+    display: flex;
+    justify-content: end;
+}

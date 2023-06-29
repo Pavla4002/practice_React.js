@@ -1,0 +1,33 @@
+.formListPurchases{
+    width: 95%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.boxForm{
+    width: 40%;
+}
+.boxList{
+    width: 60%;
+}
+.boxThemes{
+    width: 95%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: end;
+    height: 70px;
+    align-items: center;
+}
+.themes{
+    width: 100%;
+    padding: 10px 25px;
+}
+.homePage{
+    width: 100%;
+    height: 100%;
+}
+.formFixed{
+    width: 35%;
+    position: fixed;
+}

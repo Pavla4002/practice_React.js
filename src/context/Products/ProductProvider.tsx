@@ -3,7 +3,7 @@ import {ListProductContext, ProductsContext, ProductsDispatchContext} from "./pr
 import {productReducer} from "../../store/productReducer";
 
 interface ProductProviderProps{
-    children:ReactElement[];
+    children:ReactElement; // Если элементов будет несколько, то ReactElement[]
 }
 const purchases =[
     {name:'апельсинка', count:2, cost: 15, inCart: false, id:1},

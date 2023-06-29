@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ThemeProvider from "./context/Theme/ThemeProvider";
+import {RouterProvider} from "react-router-dom";
+import {publicRouter} from 'routes'
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -10,7 +12,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <ThemeProvider>
-          <App />
+          <RouterProvider router={publicRouter}/>
+          {/*<App />*/}
       </ThemeProvider>
   </React.StrictMode>
 );

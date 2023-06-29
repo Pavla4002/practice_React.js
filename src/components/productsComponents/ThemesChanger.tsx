@@ -16,8 +16,8 @@ export default function ThemesChanger (){
         <>
             <div className="theme-changer">
                 <select onChange={handelChange} value={theme}>
-                    <option value="light">Светлая</option>
-                    <option value="dark">Темная</option>
+                    <option value="light">Светлая тема</option>
+                    <option value="dark">Темная тема</option>
                 </select>
             </div>
 

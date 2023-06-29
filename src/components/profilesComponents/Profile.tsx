@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/Profiles.css'
 import {IProfile} from '../../types'
-import MyButton from "../MyButton";
+import MyButton from "../Button/MyButton";
 import {useProfileDispatch} from "../../hooks/useProfileDispatch";
 
 

@@ -1,0 +1,34 @@
+@mixin dbtn{
+    padding: 5px 10px;
+    border: none;
+}
+
+:global(.light){
+    .btn{
+        @include dbtn;
+        background-color: #32CD32;
+    }
+}
+
+:global(.dark){
+    .btn{
+        @include dbtn;
+        background-color: #32cd92;
+    }
+}
+
+//.wrap .row .col .chtoto{
+//
+//}
+//.wrap{
+//    .row{
+//        display: flex;
+//        .col{
+//            display: flex;
+//            flex-direction: column;
+//            .chtoto{
+//
+//            }
+//        }
+//    }
+//}

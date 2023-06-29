@@ -1,0 +1,38 @@
+.areaVideoPlayer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 450px;
+    padding: 20px 0;
+}
+.selectBlock{
+    background-color: #32CD32;
+    height: 60px;
+    width: 90%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.selectVideo{
+    outline: none;
+    border: none;
+    margin-right: 20px;
+}
+.videoPlay{
+    padding-top: 20px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.textPaddingR{
+    padding-right: 10px;
+    color: white;
+}
+.mbText{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,7 @@
+.purchaseCard{
+    width: 100%;
+    background-color: yellow;
+    list-style: none;
+    height: 40px;
+    margin-top: 20px;
+}

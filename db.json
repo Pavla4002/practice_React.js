@@ -1,0 +1,25 @@
+{
+  "purchases": [
+    {
+      "name": "Кокос",
+      "count": 1,
+      "cost": 50,
+      "inCart": true,
+      "id": 3
+    },
+    {
+      "name": "Яблоки",
+      "count": 1,
+      "cost": 2,
+      "inCart": false,
+      "id": 4
+    },
+    {
+      "name": "Абрикос",
+      "count": 1,
+      "cost": 2,
+      "inCart": true,
+      "id": 5
+    }
+  ]
+}

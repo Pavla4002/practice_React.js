@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import HomePage from "./pages/HomePage";
-import UserListPage from "./pages/UserListPage";
-import TestPage from "./pages/TestPage";
+import HomePage from "./pages/PurchasePage/HomePage/HomePage";
+import UserListPage from "./components/profilesComponents/UserListPage";
+import TestPage from "./pages/testPage/TestPage";
 
 function App() {
 

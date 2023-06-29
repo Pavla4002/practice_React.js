@@ -1,0 +1,38 @@
+.testPage{
+    width: 100%;
+}
+.timerAndVideo{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inputTimer{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.inputBlock{
+    width: 50%;
+    height: 200px;
+    background-color: green;
+}
+.timerBlock{
+    width: 50%;
+}
+.videoBlock{
+    width: 45%;
+}
+.link{
+    width: 90%;
+    height: 50px;
+    justify-content: space-between;
+    margin:  0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.lineLink{
+    text-decoration: underline;
+}

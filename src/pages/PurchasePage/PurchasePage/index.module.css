@@ -1,0 +1,36 @@
+.purchasePage{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    padding-top: 30px;
+}
+.part1{
+    height: 60vh;
+    width: 20%;
+    /*background-color: yellow;*/
+    padding: 20px;
+}
+.part2{
+    width: 50%;
+    height: 100%;
+    /*background-color: black;*/
+}
+.part3{
+    width: 30%;
+    height: 100%;
+    /*background-color: green;*/
+}
+.linkAdd{
+   padding: 10px 20px;
+    width: 70px;
+    height: 20px;
+    background-color: green;
+    text-decoration: none;
+    margin-top: 30px;
+}
+.btnAdd{
+    text-decoration: none;
+    color: white;
+}
