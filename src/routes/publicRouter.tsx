@@ -26,7 +26,7 @@ import {authorizationUser} from "../pages/PurchasePage/actionPurchases";
 
 const publicRoutes: RouteObject[] =[
     {
-        path:"/",
+        path:"/practice_React.js/",
         element: <PublicLayout/>,
         errorElement:<ErrorPage/>,
         children:[
