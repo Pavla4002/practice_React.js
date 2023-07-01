@@ -4,9 +4,6 @@ import styles from './index.module.css';
 import {useDebounce} from "../../../../hooks/useDebounce";
 
 type inCartOptions = "idle" | "inCartTrue" | "inCartFalse";
-// interface searchProps{
-//     refForm:React.MutableRefObject<null>
-// }
 
 const SearchPurchase = () => {
     const {q,add} = useLoaderData() as {q:string,add:inCartOptions};
@@ -24,7 +21,8 @@ const SearchPurchase = () => {
     }
     useEffect(()=>{
         setValue(q);
-    },[q]);
+        setFilter(add);
+    },[q,add]);
 
     useEffect(()=>{
         const isFirstSearch = q === '';
@@ -45,6 +43,7 @@ const SearchPurchase = () => {
                     onChange={handleChangeSearch}
                     className={styles.searchStyle}
                 />
+                <span className={styles.text}>Фильтрация продуктов:</span>
                 <select name="add" value={filter} onChange={handleChangeSelect}>
                     <option value="idle">Выберите фильтр</option>
                     <option value="inCartTrue">В корзине</option>

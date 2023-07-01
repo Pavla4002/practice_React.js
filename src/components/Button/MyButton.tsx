@@ -12,7 +12,7 @@ interface MyButtonProps{
 }
 
 export default function MyButton({children,onClick,type ="button",disabled=false}:MyButtonProps){
-    const theme = useTheme();
+    // const theme = useTheme();
     return(
             <button onClick={onClick} type={type} disabled={disabled} className={styles.btn}>
                 {children}

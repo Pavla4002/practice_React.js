@@ -13,22 +13,7 @@
 :global(.dark){
     .btn{
         @include dbtn;
-        background-color: #32cd92;
+        background-color: green;
+        color: white;
     }
 }
-
-//.wrap .row .col .chtoto{
-//
-//}
-//.wrap{
-//    .row{
-//        display: flex;
-//        .col{
-//            display: flex;
-//            flex-direction: column;
-//            .chtoto{
-//
-//            }
-//        }
-//    }
-//}

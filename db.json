@@ -1,25 +1,25 @@
 {
   "purchases": [
     {
-      "name": "Кокос",
-      "count": 1,
-      "cost": 50,
-      "inCart": true,
-      "id": 3
-    },
-    {
-      "name": "Яблоки",
-      "count": 1,
-      "cost": 2,
       "inCart": false,
-      "id": 4
+      "name": "Яблоки",
+      "count": 10,
+      "cost": 20,
+      "id": 1
     },
     {
-      "name": "Абрикос",
+      "inCart": false,
+      "name": "Ананас",
       "count": 1,
-      "cost": 2,
-      "inCart": true,
-      "id": 5
+      "cost": 120,
+      "id": 2
+    },
+    {
+      "inCart": false,
+      "name": "Киви",
+      "count": 2,
+      "cost": 25,
+      "id": 3
     }
   ]
 }

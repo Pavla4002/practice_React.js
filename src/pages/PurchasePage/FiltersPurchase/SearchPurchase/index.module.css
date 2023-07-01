@@ -1,6 +1,10 @@
 .searchStyleForm{
     padding:10px 0;
     position: relative;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
 }
 .searchStyle{
     width: 200px;
@@ -12,4 +16,7 @@
 .spinner{
     position: absolute;
     right: 20px;
+}
+.text{
+    margin: 20px 0;
 }

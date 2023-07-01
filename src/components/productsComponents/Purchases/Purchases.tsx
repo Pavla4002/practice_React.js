@@ -32,6 +32,10 @@ const Purchases = ({element}: purchasesProps) =>{
             }
         })
     }
+
+
+
+
     const handleDecrement:  React.MouseEventHandler<HTMLButtonElement> = () => {
        if(+element.count===1){
            dispatch({

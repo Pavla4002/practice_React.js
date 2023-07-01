@@ -14,9 +14,9 @@ const PublicHeader = () => {
             <div className={styles.headerContent}>
                 <ul className={styles.ul}>
                     <li> <NavLink to="/" className={classForLink}>Главная</NavLink></li>
+                    <li> <NavLink to="/purchases" className={classForLink}>Продукты</NavLink></li>
                     {/*<li> <NavLink to="/profiles" className={classForLink}>Профили</NavLink></li>*/}
                     <li> <NavLink to="/test" className={classForLink}>Тест-странца</NavLink></li>
-                    <li> <NavLink to="/purchases" className={classForLink}>Продукты</NavLink></li>
                 </ul>
                 <div className={styles.btnAndLink}>
                     <NavLink to="/registration" className={classForLink}>Регистрация</NavLink>

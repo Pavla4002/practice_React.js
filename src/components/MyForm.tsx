@@ -13,7 +13,7 @@ const MyForm = () => {
                     <h2>Добавить продукт</h2>
                     <MyInput type="hidden" value="false" name="inCart"/>
                     <MyInput  type="text" name="name" placeholder="name"/>
-                    <MyInput  type="number" name="count" placeholder="count"/>
+                    <MyInput  type="number" name="count" placeholder="count" />
                     <MyInput  type="number" name="cost" placeholder="cost"/>
                     <MyButton  type="submit">Отправить</MyButton>
                 </div>

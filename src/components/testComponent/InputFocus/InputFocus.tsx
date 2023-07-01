@@ -17,7 +17,7 @@ const InputFocus = () => {
     return(
             <div className={styles.areaInput}>
                 <div className={styles.input}>
-                    <span>Нажми на кнопку Focus и в input появится курсор</span>
+                    <span>Нажми на кнопку Focus и в input появится курсор. Реализовано с помощью хука useRef</span>
                     <MyInput type="text" name="test" value={value} ref={inputRef} handleChange={handleChange}/>
                 </div>
                 <div className={styles.btnFocus}>

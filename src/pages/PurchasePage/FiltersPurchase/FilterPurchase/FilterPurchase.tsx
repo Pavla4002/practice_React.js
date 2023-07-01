@@ -1,5 +1,5 @@
-import React from 'react';
-import {Form} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import {Form, useLoaderData} from "react-router-dom";
 
 const FilterPurchase = () => {
     return (

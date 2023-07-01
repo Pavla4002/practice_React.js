@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "unit": "jest --config ./config/jest/jest.config.ts",
     "eject": "react-scripts eject",
     "start:json": "json-server db.json --watch --port 3001"
   },
